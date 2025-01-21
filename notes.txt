@@ -1,0 +1,15 @@
+Asynchrnous in javaScript:-
+****************************
+- to perform multiple task in javascript.
+1.setTimeout()
+2.setInterval()
+3.promise:- it is an object which represent eventual completion or failure of an asynchrounus operation
+    1.pending state
+    2.fulfilled state
+    3.rejected state
+    syntax:- let p = new promise((resolve ,reject)=>{});
+    -the actual way of executing the promise is instance methods,
+    1.then:- it is used 
+4.async & await
+
+note:- by default, javascript is sunchronous(single threaded)
