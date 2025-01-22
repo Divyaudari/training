@@ -10,6 +10,8 @@ Asynchrnous in javaScript:-
     syntax:- let p = new promise((resolve ,reject)=>{});
     -the actual way of executing the promise is instance methods,
     1.then:- it is used 
+    2.catch
+    3.finally
 4.async & await
 
 note:- by default, javascript is sunchronous(single threaded)
