@@ -11,7 +11,12 @@ Asynchrnous in javaScript:-
     -the actual way of executing the promise is instance methods,
     1.then:- it is used 
     2.catch
-    3.finally
+    3.finally():-once promise is settled it prints the values.
 4.async & await
 
 note:- by default, javascript is sunchronous(single threaded)
+
+DOM:-
+****
+-DOM stands for document object model.
+-DOM is used to add, remove , update to content in html document.
