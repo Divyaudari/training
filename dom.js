@@ -38,11 +38,152 @@
 // let ele = document.querySelectorAll(".test");
 // console.log(ele);
 
-// let btn = document.querySelector("#bt")
-// btn.addEventListener("dbclick",()=>{
-//     console.log("double clicked");
-//     alert("hi")
+//! addEventListner("event" ,()=>{})
+    // btn.addEventListener("click",()=>{
+    //     // console.log("button clicked");
+    //     // alert("hi")
+    //     document.body.style.backgroundColor="tomato"
+    // })
+
+    // let btn = document.querySelector("#btn");
+    // btn.addEventListener("dblclick",()=>{
+    //     console.log("double clicked");
+    // })
+
+
+    // let divBlock = document.getElementById("divBlock");
+    // divBlock.addEventListener("mouseover",()=>{
+    //     document.body.style.backgroundColor="yellow"
+    //     divBlock.style.backgroundColor="blue"
+    // })
+
+    // divBlock.addEventListener("mouseleave",()=>{
+    //     document.body.style.backgroundColor="orange"
+    //     divBlock.style.backgroundColor="aqua"
+    // })
+
+
+    // let inp =document.getElementById("inp");
+    // inp.addEventListener("keydown",()=>{
+    //     console.log("keydown");
+    // })
+
+    // inp.addEventListener("keyup",()=>{
+    //     console.log("keyup");
+    // })
+
+
+
+// let ele = document.createElement("h1");
+// ele.innerText = "Dynamic creation of html element";
+// // ele.setAttribute("id", "demo");
+// ele.id = "demo";
+// // ele.removeAttribute("id",);
+// console.log(ele);
+
+// let image = document.createElement("img");
+// image.src ="./3606208.jpg";
+// console.log(image);
+
+// document.body.appendChild(ele);
+
+// document.body.appendChild(image);
+
+
+// let form = document.querySelector("form");
+// let username =document.getElementById("uName");
+// let mail = document.getElementById("uMail");
+// let psw = document.getElementById("uPass");
+
+// form.addEventListener("submit",(event)=>{
+//     event.preventDefault();
+//     let uname = username.Value;
+//     let uemail = mail.Value;
+//     let upass = psw.Value;
+//     let userDetails = {
+//         uname, uemail, upass
+//     }
+
+    
+//     console.log(userDetails);
+//      localStorage.setItem("userData", JSON.stringify(userDetails))
 // })
+// // localStorage.clear
 
-let divBlock
 
+// let h1 = document.createElement("h1");
+// h1.setAttribute("id","demo");
+// h1.innerText="MRU Batch 2 JS SESSION";
+// document.body.append(h1);
+
+// let main=document.createElement("div");
+// main.setAttribute("id","mainblock");
+// console.log(main);
+
+// let topEle=document.createElement("div");
+// topEle.setAttribute("class","topblock");
+
+// let image=document.createElement("img");
+// image.src ="./car.jpeg"
+// topEle.appendChild(image);
+// // console.log(topEle);
+
+// let bottomEle=document.createElement("div");
+// bottomEle.setAttribute("class","bottomblock");
+// // console.log(bottomEle);
+
+// let h1=document.createElement("h1");
+// h1.innerText="car";
+
+// let btn=document.createElement("button");
+// btn.innerText="View more";
+// btn.style.border="none";
+// btn.style.padding="20px";
+// btn.style.color="white";
+// btn.style.backgroundColor="doggerblue";
+
+// bottomEle.appendChild(h1);
+// bottomEle.appendChild(btn);
+
+// main.appendChild(topEle);
+// main.appendChild(bottomEle);
+
+// document.body.appendChild(main);
+
+let form =document.querySelector("form");
+let username =document.getElementById("uName");
+let pass =document.getElementById("uPass");
+let check =document.getElementById("check");
+let show = document.getElementById("show")
+let gender =document.getElementsByName("Gender");
+
+
+check.addEventListener("click", event=>{
+    if(event.target.checked == true){
+        pass.setAttribute("type", "text");
+        show.innerText = "hide password";
+    }else{
+        pass.setAttribute("type", "text");
+        show.innerText = "show password";
+    }
+})
+form.addEventListener("submit",(event)=>{
+    event.preventDefault();
+    let uname = username.value;
+    let psw = pass.value;
+    let gen ="";
+    for (let i=0; i<=gender.length-1;i++){
+        // console.log(gender.checked);
+        if(gender[i].checked == true){
+            gen =  gender[i].value;
+        }
+    }
+   let userDetails={
+    username:uname,
+    password:psw,
+    gender:gen
+   }
+    console.log(userDetails);
+    sessionStorage.setItem("userData", JSON.stringify(userDetails))
+     
+})
